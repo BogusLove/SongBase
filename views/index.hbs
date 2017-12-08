@@ -1,0 +1,16 @@
+{{# each folders}}
+  <form class="" action="/download/{{this.name}}" method="post" ref='uploadForm' encType="multipart/form-data">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1">Song:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="folder" value="{{this.name}}">
+        </div>
+      </div>
+      <select class="custom-select" name="file">
+        {{{ list this.files}}}
+      </select>
+      <input type="submit" class="btn btn-success" value="Download">
+    </div>
+  </form>
+{{/each}}
