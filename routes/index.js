@@ -53,7 +53,7 @@ router.post('/admin_only', (req, res, next) => {
       });
     });
   } else res.render('error', {message: 'You haven\'t access rights'});
-});
+}); 
 
 router.post('/upload', function(req, res, next) {
   let dir = '';
